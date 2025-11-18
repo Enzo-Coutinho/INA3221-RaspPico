@@ -15,10 +15,11 @@ bool isConnectedINA3221(void);
 void defaultInitINA3221(void);
 
 float getCurrent(enum CHANNEL channel);
+
 void setShuntOffset(float offset);
 void setShuntResistor(enum CHANNEL channel, float resistance);
 
-float get_shunt_voltage(enum CHANNEL channel);
-float get_bus_voltage(enum CHANNEL channel);
+float getShuntVoltage(enum CHANNEL channel);
+float getBusVoltage(enum CHANNEL channel);
 
 #endif

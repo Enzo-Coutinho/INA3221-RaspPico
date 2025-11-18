@@ -6,8 +6,6 @@ void awaitConnectionOfINA3221()
     do
     {
         sleep_ms(500);
-        printf("ID: %d\n", get_manufacturer_id());
-        printf("Die ID: %d\n", get_die_id());
     } while (!isConnectedINA3221());
 }
 

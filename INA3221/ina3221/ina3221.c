@@ -80,7 +80,7 @@ void set_configuration(configuration_t  * config) {
     write_register_ina3221(__ADDR_CONFIGURATION, config->u16_configuration);
 }
 
-float get_shunt_voltage(enum CHANNEL channel)
+float getShuntVoltage(enum CHANNEL channel)
 {
     uint8_t reg = 0;
     switch(channel)
@@ -101,7 +101,7 @@ float get_shunt_voltage(enum CHANNEL channel)
     return ((shunt_voltage >> 3) * 40e-6) - shunt_voltage_offset;
 }
 
-float get_bus_voltage(enum CHANNEL channel)
+float getBusVoltage(enum CHANNEL channel)
 {
     uint8_t reg = 0;
     switch(channel)
